@@ -27,6 +27,10 @@ class SportCell: UITableViewCell {
         // Initialization code
     }
     
+    override func prepareForReuse() {
+        sportImage.image = UIImage(named: "ImagePlaceHolder")
+    }
+    
     @objc func imageTapped(_ sender:UITapGestureRecognizer){
         delegate?.addImage(self)
     }
